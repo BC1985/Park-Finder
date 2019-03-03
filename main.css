@@ -1,0 +1,29 @@
+body{
+    background-image: url('https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1477933003/shenandoah-national-park%3DSNP1016.jpg?itok=9MEUzxoC');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    height:100%;
+    background-position-y: 20%;
+        background-position-x: 30%;
+
+    padding:50px;
+}
+
+
+li  {
+    list-style-type: none;
+}
+
+input{
+    display: block;
+    margin:10px 0px 10px ;
+}
+
+button {
+    color:white;
+    background-color: #1F4E71;
+    padding:10px;
+    border-radius: 5px;
+}
+
+/* https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1477933003/shenandoah-national-park%3DSNP1016.jpg?itok=9MEUzxoC */
