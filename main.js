@@ -31,7 +31,7 @@ function getParks(stateSearch) {
     })
     .then(responseJson => showResults(responseJson))
     .catch(err => {
-        $('.results').text(`${err.message}`);
+        $('#error-message').text(`Something went wrong. ${err.message}`);
         
     });   
 }
@@ -50,7 +50,9 @@ function showResults(responseJson) {
     //NEED TO LEARN HOW TO PAGINATE API RESPONSE
         $('header').remove();
         $('.results').append(
-            `<li><h2>${parkInfo[i].name}</h2></li>
+
+            `<li><h2 class='state-name'>${parkInfo[i].states}</h2></li>
+            <li><h2>${parkInfo[i].fullName}</h2></li>
             <li><p>${parkInfo[i].description}</p></li>
             <li><h3><a href='${parkInfo[i].url}'>Website</a></h3></li>`
             
@@ -58,8 +60,10 @@ function showResults(responseJson) {
     };  
     //prepares form for another search
     $('input[type=text]').val("")
-    $('label').remove();
+    // $('label').remove();
     $('input[type=text]').attr('placeholder','Search again?');
+    $('.results').removeClass('hidden');
+    $('form').addClass('flex')
   
 }
 
@@ -74,6 +78,18 @@ function watchForm() {
         $('.results').empty();
     });
 }
+// FIND OUT HOW TO RUN THIS VALIDATION
+/*function validateState() {
+    const stateAbb=['al','ak','az','ar','ca','co','ct','de','fl','ga','hi','id','il','in','ia','ks','ky','la','me','md','ma','mi','mn','ms','mo','mt','ne','nv','nh','nj','nm','ny','nc','nd','oh','ok','or','pa','ri','sc','sd','tn','tx','ut','vt','va','wa','wv','wi','wy'];
+    const stateSearch = $('#state-search').val();
+for (let index = 0; index < stateAbb.length; index++) {
+    if (stateSearch in stateAbb) {
+     ??????????     
+    }else{
+        $('.results').text('Please make sure you have the right state abbreviation')
+    }   
+}
+}*/
 
 function renderPage(){
 watchForm();

@@ -6,6 +6,8 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Domine|Open+Sans+Condensed:300" rel="stylesheet">
+
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
 
@@ -15,13 +17,17 @@
         <header>
             <h1>National Park Finder</h1>
             <h2>Plan your next vacation in the great American outdoors</h2>
+            <p>Enter state abbreviation and click submit for list of national parks. If you are not sure of the two-letter state
+                abbreviation, you may look it up <a href="https://www.50states.com/abbreviations.htm" target='_blank'>here.</a></p>
+            </p>
         </header>
-        <div class="results"></div>
+        <div class="results hidden"></div>
             <form id='form'>
-                <label for='input'>Enter state abbreviation for list of national parks</label><input type="text" id='state-search' placeholder="Example: NY" required>
+                <label for='input'><input type="text" id='state-search' placeholder="Example: NY" required></label>
                 <!-- <label for='input'>Number of search results (default is 10)<input type="text" id='max-results'></label> -->
                 <button>submit</button>
             </form>
+            <div id="error-message"></div>
     </div>
         
         <script src="main.js"></script>
