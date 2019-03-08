@@ -6,6 +6,7 @@ body{
     /* background-position-x: 30%; */
     background-position:bottom;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 
     padding:30px;
 }
@@ -44,7 +45,7 @@ input{
 button {
     color:white;
     background-color: #1F4E71;
-    padding:10px;
+    padding:7px;
     border-radius: 5px;
     margin-left:10px;
 }
@@ -53,7 +54,7 @@ h1, h2 {
     font-family: 'Domine', serif;
 }
 
-.state-name{
+.park-name{
     color:rgb(97, 94, 94);
 }
 
@@ -69,14 +70,16 @@ a:link{
 
 }
 
-a:link:hover, a:link:visited{
+a:link:hover, a:visited{
 
     color:rgb(53, 65, 35);
 }
 
 #error-message{
-    color:red;
+    color:rgb(28, 56, 30);
     margin-top:30px;
+    text-align: center;
+    font-size: 20px;
 }
 
 /* IPAD DISPLAY */
@@ -153,9 +156,9 @@ a:link:hover, a:link:visited{
         text-align: center;
     }
 
-    p{
+    /* p{
     font-size: 20px;
-}
+} */
 
 .results{
     padding:100px 100px 50px 100px;
