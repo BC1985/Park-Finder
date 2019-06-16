@@ -8,8 +8,8 @@ Live version here https://bc1985.github.io/Park-Finder/
 
 ##### Screenshots
 
-<img src="Images/NPS_screenshot.png" width="500">
-<img src="Images/NPS_screenshot2.png" width="500">
+<img src="../Images/NPS_screenshot.png" width="500">
+<img src="../Images/NPS_screenshot2.png" width="500">
 
 ##### Summary
 
