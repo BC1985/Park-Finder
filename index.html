@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>NPS Park Finder</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Domine&vertOpen+Sans+Condensed:300" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Domine&vertOpen+Sans+Condensed:300"
+      rel="stylesheet"
+    />
 
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-
-
-</head>
-<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+  <body>
     <div class="landing">
-        <header>
-            <h1>National Park Finder</h1>
-            <h2>Plan your next vacation in the great American outdoors</h2>
-            <p>Enter state abbreviation and click submit for list of national parks. If you are not sure of the two-letter state
-                abbreviation, you may look it up <a href="https://www.50states.com/abbreviations.htm" target='_blank'>here.</a></p>
-        </header>
-        
-            <form id='form'>
-                <input type="text" id='state-search' placeholder="Example: NY" required>
-                <!-- <label for='input'>Number of search results (default is 10)<input type="text" id='max-results'></label> -->
-                <button>submit</button>
-            </form>
-            <div id="error-message"></div>
-            <div class="results hidden"></div>
+      <header>
+        <h1>National Park Finder</h1>
+        <h2>Plan your next vacation in the great American outdoors</h2>
+        <p>
+          Enter state abbreviation and click submit for list of national parks.
+          If you are not sure of the two-letter state abbreviation, you may look
+          it up
+          <a href="https://www.50states.com/abbreviations.htm" target="_blank"
+            >here.</a
+          >
+        </p>
+      </header>
+
+      <form id="form">
+        <input
+          type="text"
+          id="state-search"
+          placeholder="Example: NY"
+          required
+        />
+        <!-- <label for='input'>Number of search results (default is 10)<input type="text" id='max-results'></label> -->
+        <button>submit</button>
+      </form>
+      <div id="error-message"></div>
+      <div class="results hidden"></div>
     </div>
-        
-        <script src="main.js"></script>
-</body>
+
+    <script src="main.js"></script>
+  </body>
 </html>
