@@ -1,15 +1,27 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 812px) {
   body {
-    background-image: url("http://www.pugdundeesafaris.com/blog/wp-content/uploads/2017/06/Kanha-National-Park-1024x576.jpg");
+    /* background-image: url("http://www.pugdundeesafaris.com/blog/wp-content/uploads/2017/06/Kanha-National-Park-1024x576.jpg"); */
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color: white;
-    padding: 30px;
+    margin: 0;
   }
-  .landing {
-    color: white;
+  .header {
+    padding: 40px;
+    background: darkolivegreen;
+    color: wheat;
+  }
+  #logo {
+    margin-right: 5px;
+  }
+  .header h1 {
+    font-size: 1.8em;
+    font-family: "Cabin", sans-serif;
+  }
+  .container {
+    font-family: "Raleway", sans-serif;
+    padding: 30px;
   }
   .results {
     display: flex;
@@ -54,17 +66,8 @@ button {
   margin-left: 10px;
 }
 
-h1,
-h2 {
-  font-family: "Domine", serif;
-}
-
 .park-name {
   color: rgb(97, 94, 94);
-}
-
-p {
-  font-family: "Open Sans Condensed", sans-serif;
 }
 
 a:link {
