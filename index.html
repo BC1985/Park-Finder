@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Cabin|Raleway&display=swap"
+      href="https://fonts.googleapis.com/css?family=Cabin|Raleway:400,700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -26,24 +26,20 @@
     <div class="container">
       <h2>Plan your next vacation in the great American outdoors</h2>
       <p>
-        Enter state abbreviation and click submit for list of national parks. If
-        you are not sure of the two-letter state abbreviation, you may look it
-        up
-        <a href="https://www.50states.com/abbreviations.htm" target="_blank"
-          >here.</a
-        >
+        Enter state name or two-letter abbreviation and click submit for list of
+        national parks in that state.
       </p>
-
-      <form id="form">
-        <input
-          type="text"
-          id="state-search"
-          placeholder="Example: NY"
-          required
-        />
-        <!-- <label for='input'>Number of search results (default is 10)<input type="text" id='max-results'></label> -->
-        <button>submit</button>
-      </form>
+      <div class="form-container">
+        <div id="form">
+          <input
+            type="text"
+            id="state-search"
+            placeholder="Example: NY"
+            required
+          />
+        </div>
+        <button class="button" id="submit-button">submit</button>
+      </div>
       <div id="error-message"></div>
       <div class="results hidden"></div>
     </div>
