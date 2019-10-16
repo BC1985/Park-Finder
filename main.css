@@ -24,7 +24,7 @@
     font-family: "Raleway", sans-serif;
     padding: 30px;
   }
-  .container h2 {
+  #sub-heading {
     color: #69401b;
     font-size: 1.4em;
     font-weight: bold;
@@ -43,9 +43,7 @@
     font-weight: bold;
     margin-bottom: 10px;
   }
-  h2 {
-    margin-block-start: 0px;
-  }
+
   /* Dont touch */
 }
 
@@ -79,17 +77,19 @@ input[type="text"] {
 }
 
 .park-name {
-  color: rgb(97, 94, 94);
+  color: darkolivegreen;
 }
 
 a:link {
-  color: white;
+  color: darkolivegreen;
   font-family: "Open Sans Condensed", sans-serif;
 }
 
-a:link:hover,
 a:visited {
-  color: white;
+  color: darkolivegreen;
+}
+a:link:hover {
+  color: brown;
 }
 
 #error-message {
@@ -97,6 +97,12 @@ a:visited {
   margin-top: 30px;
   text-align: center;
   font-size: 20px;
+}
+#state {
+  font-family: "Cabin", sans-serif;
+  font-size: 2em;
+  color: #69401b;
+  margin: 0;
 }
 
 /* IPAD DISPLAY */
@@ -142,9 +148,7 @@ a:visited {
   a:link:visited {
     color: white;
   }
-  h2 {
-    margin-block-start: 0px;
-  }
+
   /* DONT TOUCH */
 }
 
