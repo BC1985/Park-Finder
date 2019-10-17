@@ -33,10 +33,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px;
-    background-color: rgb(245, 245, 245, 0.7);
+    padding-right: 20px;
     color: rgb(52, 58, 52);
     border-radius: 10px;
+  }
+  .designation {
+    margin-block-start: 0;
+    font-size: 1em;
+    font-style: italic;
+  }
+  .icon {
+    font-size: 2em;
+    margin-right: 10px;
   }
   li {
     list-style-type: none;
@@ -78,15 +86,21 @@ input[type="text"] {
 
 .park-name {
   color: darkolivegreen;
+  margin-block-start: 0px;
 }
-
+a {
+  color: wheat;
+  text-decoration: none;
+}
 a:link {
-  color: darkolivegreen;
+  background: #69401b;
+  border-radius: 10px;
+  padding: 10px 20px;
   font-family: "Open Sans Condensed", sans-serif;
 }
 
 a:visited {
-  color: darkolivegreen;
+  /* color: darkolivegreen; */
 }
 a:link:hover {
   color: brown;
@@ -100,9 +114,16 @@ a:link:hover {
 }
 #state {
   font-family: "Cabin", sans-serif;
-  font-size: 2em;
+  font-size: 1.8em;
   color: #69401b;
-  margin: 0;
+  margin: 20px 0;
+}
+.icon-container {
+  display: flex;
+  flex-direction: row;
+}
+.description-container {
+  line-height: 1.5em;
 }
 
 /* IPAD DISPLAY */
@@ -130,7 +151,7 @@ a:link:hover {
     display: inline-block;
   }
   .results {
-    padding: 50px 100px 50px 50px;
+    /* padding: 50px 100px 50px 50px; */
     background-color: rgb(245, 245, 245, 0.7);
     color: rgb(53, 56, 55);
   }
