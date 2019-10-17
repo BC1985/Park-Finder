@@ -132,7 +132,9 @@
     background-repeat: no-repeat;
     margin: 0;
   }
-
+  #logo {
+    margin-right: 3px;
+  }
   .header {
     text-align: center;
     padding: 30px;
@@ -267,12 +269,18 @@
     color: #f7f7f7;
     text-align: center;
   }
+  #logo {
+    margin-right: 3px;
+  }
 }
 
 /* DESKTOP DISPLAY */
 @media only screen and (min-width: 1224px) {
   body {
     background-position: bottom;
+  }
+  #logo {
+    margin-right: 3px;
   }
 
   .header {
