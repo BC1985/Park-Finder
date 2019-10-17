@@ -28,7 +28,7 @@ function getParks(stateSearch) {
     })
     .then(responseJson => showResults(responseJson))
     .catch(err => {
-      $("#error-message").text(`Something went wrong. ${err.message}`);
+      throw new Error(err.message);
     });
 }
 
@@ -45,17 +45,16 @@ function showResults(responseJson) {
   for (let i = 0; i < parkInfo.length; i++) {
     // $(".container").hide();
     $(".results").append(
-      `<h2 class='park-name'>${parkInfo[i].fullName}</h2>
-      <p>${capitalizeFirstLetter(getStateName(parkInfo[0].states))}</p>
-      <h3>${parkInfo[i].designation}</h3>
-      <div class="container-sm">
-      <li><i class="fas fa-map-signs"></i></li>
-        <li><p>${parkInfo[i].description}</p></li>
-        <li><i class="fas fa-cloud-sun"></i></li>
+      `<h2 class='park-name'>${parkInfo[i].fullName}</h2>  
+      <h3 class="designation">${parkInfo[i].designation}</h3>
+      <div class="icon-container">
+      <li><i class="fas fa-map-signs icon"></i></li>
+      <li><i class="fas fa-cloud-sun icon"></i></li>
       </div>  
-        <li><h3><a href='${
-          parkInfo[i].url
-        }' target="_blank">Website</a></h3></li>`
+      <div class="description-container"
+        <li><p>${parkInfo[i].description}</p></li>
+      </div>
+        <li><h3><a href='${parkInfo[i].url}' target="_blank">Website</a></h3></li>`
     );
   }
   //prepares form for another search
@@ -155,7 +154,7 @@ const states = {
   ak: "alaska",
   az: "arizona",
   ar: "arkensas",
-  ca: "califonia",
+  ca: "california",
   co: "colorado",
   ct: "connecticut",
   de: "delaware",
