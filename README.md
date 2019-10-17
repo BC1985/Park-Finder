@@ -7,8 +7,8 @@ Live version here https://bc1985.github.io/Park-Finder/
 #### Search for information about any of the country's national parks historical locales from the National Parks Service API.
 
 ##### Screenshots
-![](Images/NPSscreenshot1.png)
-![](Images/NPSscreenshot2.png)
+![](Images/nps-screenshot1.png)
+![](Images/nps-screenshot2.png)
 
 
 ##### Summary
