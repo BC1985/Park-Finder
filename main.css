@@ -106,9 +106,9 @@
   }
   #state {
     font-family: "Cabin", sans-serif;
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #69401b;
-    margin: 20px 0;
+    margin: 40px 0 20px;
   }
   .icon-container {
     display: flex;
@@ -180,9 +180,9 @@
   }
   #state {
     font-family: "Cabin", sans-serif;
-    font-size: 1.8em;
+    font-size: 1.6em;
     color: #69401b;
-    margin: 20px 0;
+    margin: 40px 0 20px;
   }
   .icon-container {
     display: flex;
@@ -333,9 +333,9 @@
   }
   #state {
     font-family: "Cabin", sans-serif;
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #69401b;
-    margin: 20px 0;
+    margin: 50px 0 0 0px;
   }
   .description {
     margin-bottom: 5%;
