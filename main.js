@@ -6,14 +6,13 @@ function formatQueryParams(params) {
   const queryItems = Object.keys(params).map(
     key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`
   );
-  console.log(queryItems);
   return queryItems.join("&");
 }
 
 function getParks(stateSearch) {
   const params = {
     stateCode: stateSearch,
-    limit: 10,
+    limit: 50,
     api_key: apiKey
   };
 
@@ -36,10 +35,11 @@ function getParks(stateSearch) {
 
 function showResults(responseJson) {
   const parkInfo = responseJson.data;
-  console.log(responseJson.data);
+  console.log(parkInfo[0]);
+
   $("#state").append(
     `<h2 id="state">
-      ${capitalizeFirstLetter(getStateName(parkInfo[0].states))}</h2>`
+        ${capitalizeFirstLetter(getStateName(parkInfo[0].states))}</h2>`
   );
 
   for (let i = 0; i < parkInfo.length; i++) {
@@ -48,13 +48,13 @@ function showResults(responseJson) {
       `<h2 class='park-name'>${parkInfo[i].fullName}</h2>  
       <h3 class="designation">${parkInfo[i].designation}</h3>
       <div class="icon-container">
-      <li><i class="fas fa-map-signs icon"></i></li>
+      <li><a href='${parkInfo[i].directionsUrl}' class="icon-link" target="_blank"><i class="fas fa-map-signs icon"></i></a></li>
       <li><i class="fas fa-cloud-sun icon"></i></li>
       </div>  
       <div class="description-container"
         <li><p>${parkInfo[i].description}</p></li>
       </div>
-        <li><h3><a href='${parkInfo[i].url}' target="_blank">Website</a></h3></li>`
+        <li><h3><a href='${parkInfo[i].url}' class="btn" target="_blank">Website</a></h3></li>`
     );
   }
   //prepares form for another search
