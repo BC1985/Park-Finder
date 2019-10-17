@@ -24,23 +24,26 @@
       <h1><i class="fas fa-hiking" id="logo"></i>ational Park Finder</h1>
     </div>
     <div class="container">
-      <h2>Plan your next vacation in the great American outdoors</h2>
+      <h2 id="sub-heading">
+        Plan your next vacation in the great American outdoors
+      </h2>
       <p>
         Enter state name or two-letter abbreviation and click submit for list of
         national parks in that state.
       </p>
       <div class="form-container">
-        <div id="form">
+        <form id="form">
           <input
             type="text"
             id="state-search"
             placeholder="Example: NY"
             required
           />
-        </div>
-        <button class="button" id="submit-button">submit</button>
+          <button class="button" id="submit-button">submit</button>
+        </form>
       </div>
       <div id="error-message"></div>
+      <div id="state"></div>
       <div class="results hidden"></div>
     </div>
 
