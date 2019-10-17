@@ -124,7 +124,7 @@
 }
 
 /* mobile Landscape mode */
-@media only screen and (min-device-width: 375px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 1224px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   body {
     background-size: cover;
     background-position: bottom;
@@ -212,7 +212,7 @@
 }
 /* IPAD DISPLAY */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1224px) {
+@media only screen and (min-device-width: 813px) and (max-device-width: 1224px) {
   body {
     background-size: cover;
     background-position: bottom;
