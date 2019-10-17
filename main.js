@@ -18,9 +18,12 @@ function getParks(stateSearch) {
 
   const queryString = formatQueryParams(params);
   const url = searchURL + "?" + queryString;
+  const loadingAnimation = $(".loading");
   fetch(url)
+    .then(loadingAnimation.removeClass("hidden"))
     .then(response => {
       if (response.ok) {
+        loadingAnimation.addClass("hidden");
         return response.json();
       }
       throw new Error(response.statusText);
