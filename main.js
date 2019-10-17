@@ -48,13 +48,13 @@ function showResults(responseJson) {
       <h2 class='park-name'>${parkInfo[i].fullName}</h2>  
       <h3 class="designation">${parkInfo[i].designation}</h3>
       <div class="icon-container">
-      <li><a href='${parkInfo[i].directionsUrl}'target="_blank"><i class="fas fa-map-signs icon icon-link"></i></a></li> 
+      <li><a href='${parkInfo[i].directionsUrl}'target="_blank"><i class="fas fa-map-signs icon"></i></a></li> 
       <li><i class="fas fa-cloud-sun icon"></i></li>
       </div>  
       <div class="description"
         <li><p>${parkInfo[i].description}</p></li>
       </div>
-        <li><h3><a href='${parkInfo[i].url}' class="btn" target="_blank">Website</a></h3></li></div>`
+        <li><h3><a href='${parkInfo[i].url}' class="link-btn" target="_blank">Website</a></h3></li></div>`
     );
   }
   //prepares form for another search
