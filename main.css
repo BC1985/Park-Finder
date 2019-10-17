@@ -88,22 +88,18 @@ input[type="text"] {
   color: darkolivegreen;
   margin-block-start: 0px;
 }
-a {
-  color: wheat;
+
+.btn {
   text-decoration: none;
-}
-a:link {
+  color: wheat;
   background: #69401b;
   border-radius: 10px;
   padding: 10px 20px;
   font-family: "Open Sans Condensed", sans-serif;
 }
 
-a:visited {
-  /* color: darkolivegreen; */
-}
-a:link:hover {
-  color: brown;
+.icon-link {
+  color: black;
 }
 
 #error-message {
