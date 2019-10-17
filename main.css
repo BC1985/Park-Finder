@@ -18,6 +18,14 @@ input[type="text"] {
   color: #69401b;
   font-size: 1.4em;
   font-weight: bold;
+  font-size: 2em;
+}
+
+.designation {
+  margin-block-start: 0;
+  font-size: 1em;
+  font-style: italic;
+  padding: 10px 0;
 }
 
 .park-name {
@@ -38,7 +46,7 @@ input[type="text"] {
   }
   .container {
     font-family: "Raleway", sans-serif;
-    padding: 30px;
+    padding: 10%;
   }
 
   .results {
@@ -48,11 +56,6 @@ input[type="text"] {
     padding-right: 20px;
     color: rgb(52, 58, 52);
     border-radius: 10px;
-  }
-  .designation {
-    margin-block-start: 0;
-    font-size: 1em;
-    font-style: italic;
   }
   .icon {
     font-size: 2em;
@@ -270,7 +273,7 @@ input[type="text"] {
   }
   .container {
     font-family: "Raleway", sans-serif;
-    padding: 10%;
+    padding: 5%;
   }
   .park-container {
     margin-bottom: 30px;
@@ -300,6 +303,7 @@ input[type="text"] {
     flex-direction: row;
   }
   .link-btn {
+    font-size: 0.6em;
     text-decoration: none;
     color: wheat;
     background: #69401b;
@@ -320,10 +324,10 @@ input[type="text"] {
     font-family: "Cabin", sans-serif;
     font-size: 1.5em;
     color: #69401b;
-    margin: 50px 0 0 0px;
+    margin: 50px 0 20px 0px;
   }
   .description {
-    margin-bottom: 5%;
+    margin-bottom: 30px;
   }
 
   .hidden {
