@@ -35,10 +35,11 @@ function getParks(stateSearch) {
 
 function showResults(responseJson) {
   const parkInfo = responseJson.data;
-  console.log(parkInfo);
+  const stateInput = $("#state-search").val();
+  const stateName = getStateName(stateInput);
   $("#state").append(
     `<h2 id="state">      
-        ${getStateName($("#state-search").val()).toUpperCase()}</h2>`
+        ${capitalizeState(stateName)}</h2>`
   );
 
   for (let i = 0; i < parkInfo.length; i++) {
@@ -64,13 +65,11 @@ function showResults(responseJson) {
   $("form").addClass("flex");
 }
 
-function capitalizeFirstLetter(string) {
-  if (!string) {
-    return "";
-  }
-  return string.charAt(0).toUpperCase() + string.slice(1);
+function capitalizeState(str) {
+  return str.replace(/\w\S*/g, function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
 }
-
 function watchForm() {
   $("form").submit(event => {
     event.preventDefault();
