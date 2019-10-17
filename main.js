@@ -1,6 +1,6 @@
 "use strict";
 const apiKey = "sWie0nqphB0xnsS26IndXTwAVp35qjsiB3ElCH8y";
-const searchURL = "https://api.nps.gov/api/v1/parks";
+const searchURL = "https://developer.nps.gov/api/v1/parks";
 
 function formatQueryParams(params) {
   const queryItems = Object.keys(params).map(
@@ -36,24 +36,32 @@ function getParks(stateSearch) {
 
 function showResults(responseJson) {
   const parkInfo = responseJson.data;
+  console.log(responseJson.data);
+  $("#state").append(
+    `<h2 id="state">
+      ${capitalizeFirstLetter(getStateName(parkInfo[0].states))}</h2>`
+  );
 
   for (let i = 0; i < parkInfo.length; i++) {
-    $("header").remove();
+    // $(".container").hide();
     $(".results").append(
-      `<li><h2>${capitalizeFirstLetter(
-        getStateName(parkInfo[i].states)
-      )}</h2></li>
-            <li><h2 class='park-name'>${parkInfo[i].fullName}</h2></li>
-            <li><p>${parkInfo[i].description}</p></li>
-            <li><h3><a href='${
-              parkInfo[i].url
-            }' target="_blank">Website</a></h3></li>`
+      `<h2 class='park-name'>${parkInfo[i].fullName}</h2>
+      <p>${capitalizeFirstLetter(getStateName(parkInfo[0].states))}</p>
+      <h3>${parkInfo[i].designation}</h3>
+      <div class="container-sm">
+      <li><i class="fas fa-map-signs"></i></li>
+        <li><p>${parkInfo[i].description}</p></li>
+        <li><i class="fas fa-cloud-sun"></i></li>
+      </div>  
+        <li><h3><a href='${
+          parkInfo[i].url
+        }' target="_blank">Website</a></h3></li>`
     );
   }
   //prepares form for another search
+  $(".results").removeClass("hidden");
   $("input[type=text]").val("");
   $("input[type=text]").attr("placeholder", "Search again?");
-  $(".results").removeClass("hidden");
   $("form").addClass("flex");
 }
 
