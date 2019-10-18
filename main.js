@@ -53,8 +53,9 @@ function showResults(responseJson) {
       <h3 class="designation">${parkInfo[i].designation}</h3>
       <div class="icon-container">
       <li><a href='${parkInfo[i].directionsUrl}'target="_blank"><i class="fas fa-map-signs icon"></i></a></li> 
-      <li><i class="fas fa-cloud-sun icon"></i></li>
+      <li><i class="fas fa-cloud-sun icon" onclick = $('.weather-info').toggleClass('hidden')></i></a></li>
       </div>  
+      <div class="weather-info hidden"><p>${parkInfo[i].weatherInfo}</p></div>
       <div class="description"
         <li><p>${parkInfo[i].description}</p></li>
       </div>
