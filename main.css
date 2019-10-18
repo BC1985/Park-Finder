@@ -32,6 +32,14 @@ input[type="text"] {
   color: darkolivegreen;
   margin-block-start: 0px;
 }
+
+.weather-info {
+  color: white;
+  line-height: 1.5em;
+  background: gray;
+  border-radius: 10px;
+  padding: 20px;
+}
 /* loading animation */
 .loading {
   font-size: 30px;
@@ -300,7 +308,7 @@ input[type="text"] {
   }
   .container {
     font-family: "Raleway", sans-serif;
-    padding: 5%;
+    padding: 10% 20%;
   }
   .park-container {
     margin-bottom: 30px;
@@ -337,6 +345,7 @@ input[type="text"] {
     border-radius: 10px;
     padding: 10px 20px;
     font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1em;
   }
 
   .button {
@@ -355,6 +364,8 @@ input[type="text"] {
   }
   .description {
     margin-bottom: 30px;
+    line-height: 1.5em;
+    font-size: 1.2em;
   }
 
   .hidden {
