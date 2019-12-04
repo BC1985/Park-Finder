@@ -9,6 +9,28 @@ input[type="text"] {
   border-radius: 5px;
   font-size: 1em;
 }
+.header {
+  padding: 30px;
+  background: rgb(85, 107, 47);
+  color: #f7f7f7;
+  font-family: "Cabin", sans-serif;
+  text-align: center;
+}
+
+.container {
+  font-family: "Raleway", sans-serif;
+  padding: 10%;
+}
+
+.button {
+  flex-grow: 1;
+  color: white;
+  padding: 10px 20px;
+  background-color: #69401b;
+  font-size: 1em;
+  border-radius: 5px;
+  margin-top: 20px;
+}
 
 #logo {
   margin-right: 3px;
