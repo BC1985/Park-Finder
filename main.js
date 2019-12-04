@@ -72,7 +72,7 @@ const statesList = [
   "Alaska",
   "American Samoa",
   "Arizona",
-  "Arkensas",
+  "Arkansas",
   "District Of Columbia",
   "US Virgin Islands",
   "California",
