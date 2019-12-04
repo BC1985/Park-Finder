@@ -91,7 +91,7 @@ const statesList = [
   "Michigan",
   "Minnesota",
   "Mississippi",
-  "Misouri",
+  "Missouri",
   "Montana",
   "Nebraska",
   "Nevada",
