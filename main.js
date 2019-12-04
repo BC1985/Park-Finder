@@ -135,7 +135,8 @@ $("#state-search").autocomplete({
 $("#state-search").autocomplete({
   select: function(event, ui) {
     $("#error-message").addClass("hidden");
-  }
+  },
+  position: { my: "right bottom", at: "right top" }
 });
 
 // Converts states names to abbreivations as they appear in the JSON data
