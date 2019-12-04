@@ -33,12 +33,14 @@ input[type="text"] {
   margin-block-start: 0px;
 }
 
-.weather-info {
+#weather-info {
   color: white;
   line-height: 1.5em;
   background: gray;
   border-radius: 10px;
   padding: 20px;
+  overflow: hidden;
+  transition: height 200ms;
 }
 /* loading animation */
 .loading {
