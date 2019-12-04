@@ -4,7 +4,6 @@ const searchURL = "https://developer.nps.gov/api/v1/parks";
 
 function getParks(abbr) {
   const url = `${searchURL}?stateCode=${abbr}&limit=50&api_Key=${apiKey}`;
-  console.log(url);
   const loadingAnimation = $(".loading");
   fetch(url)
     .then(loadingAnimation.removeClass("hidden"))
@@ -30,11 +29,11 @@ function showResults(responseJson) {
   for (let i = 0; i < parkInfo.length; i++) {
     $(".results").append(
       `<div class="park-container">
-      <h2 class='park-name'>${parkInfo[i].fullName}</h2>  
+      <h2 class="park-name">${parkInfo[i].fullName}</h2>  
       <h3 class="designation">${parkInfo[i].designation}</h3>
       <div class="icon-container">
       <li><a href='${parkInfo[i].directionsUrl}'target="_blank"><i class="fas fa-map-signs icon"></i></a></li> 
-      <li><i class="fas fa-cloud-sun icon" onclick = $('.weather-info').toggleClass('hidden')></i></a></li>
+      <li><i class="fas fa-cloud-sun icon" onclick = $(".weather-info").toggleClass("hidden")></i></a></li>
       </div>  
       <div class="weather-info hidden"><p id="weather-info">${parkInfo[i].weatherInfo}</p></div>
       <div class="description"
@@ -53,13 +52,18 @@ function showResults(responseJson) {
 
 function watchForm() {
   $("form").submit(e => {
-    let stateInput = $("#state-search").val();
     e.preventDefault();
-    getParks(convertRegion(stateInput));
-    //   //empties previous search results
-    $("#error-message").empty();
-    $("#state").empty();
-    $(".results").empty();
+    let stateInput = $("#state-search").val();
+    if (stateInput === "") {
+      $("#error-message").removeClass("hidden");
+    } else {
+      getParks(convertRegion(stateInput));
+
+      //empties previous search results
+      $("#error-message").empty();
+      $("#state").empty();
+      $(".results").empty();
+    }
   });
 }
 // Displays options for autocomplete
@@ -123,6 +127,14 @@ $("#state-search").autocomplete({
   source: statesList,
   classes: {
     "ui-autocomplete": "highlight"
+  },
+  autoFocus: true,
+  delay: 50
+});
+
+$("#state-search").autocomplete({
+  select: function(event, ui) {
+    $("#error-message").addClass("hidden");
   }
 });
 
@@ -190,7 +202,6 @@ function convertRegion(input) {
   var i;
   for (i = 0; i < statesAndAbbreviations.length; i++) {
     if (statesAndAbbreviations[i][0] == input) {
-      console.log(statesAndAbbreviations[i][1]);
       return statesAndAbbreviations[i][1];
     }
   }
