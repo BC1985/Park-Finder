@@ -57,6 +57,9 @@ input[type="text"] {
   content: "\2026";
   width: 0px;
 }
+.hidden {
+  display: none;
+}
 
 @keyframes ellipsis {
   to {
@@ -114,7 +117,7 @@ input[type="text"] {
 
   .form-container {
     display: flex;
-    margin-top: 30px;
+    padding-top: 30px;
   }
   .hidden {
     display: none;
@@ -141,9 +144,6 @@ input[type="text"] {
 
   #error-message {
     color: red;
-    margin-top: 30px;
-    font-size: 20px;
-    font-weight: bold;
   }
   #state {
     font-family: "Cabin", sans-serif;
